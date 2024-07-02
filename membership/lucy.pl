@@ -1,6 +1,6 @@
 %% Lucy
 
-met_minimum_resource_apportation.
+met_minimum_resource_contribution.
 % low_carbon_certification.
 % met_minimal_work_quality.
 % wildlife_protection.

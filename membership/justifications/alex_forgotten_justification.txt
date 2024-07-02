@@ -4,14 +4,14 @@
 
 JUSTIFICATION_TREE:
 accept_membership :-
-    met_minimum_resource_apportation,
+    met_minimum_resource_contribution,
     met_requirement :-
         low_carbon_emissions.
     low_consumption.
 global_constraint.
 
 MODEL:
-{ accept_membership,  met_minimum_resource_apportation,  met_requirement,  low_consumption }
+{ accept_membership,  met_minimum_resource_contribution,  met_requirement,  low_consumption }
 BINDINGS:
 
 
@@ -19,12 +19,12 @@ BINDINGS:
 
 JUSTIFICATION_TREE:
 accept_membership :-
-    met_minimum_resource_apportation,
+    met_minimum_resource_contribution,
     met_requirement,
     low_consumption.
 global_constraint.
 
 MODEL:
-{ accept_membership,  met_minimum_resource_apportation,  met_requirement,  low_consumption }
+{ accept_membership,  met_minimum_resource_contribution,  met_requirement,  low_consumption }
 BINDINGS:
 

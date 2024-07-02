@@ -7,5 +7,5 @@
 #show accept_membership/0, met_requirement/0.
 #show low_consumption/0.
 
-#show met_minimum_resource_apportation/0.
+#show met_minimum_resource_contribution/0.
 #show last_exam_failed/0.

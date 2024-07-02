@@ -4,7 +4,7 @@
 
 JUSTIFICATION_TREE:
 not accept_membership :-
-    not met_minimum_resource_apportation.
+    not met_minimum_resource_contribution.
 global_constraint.
 
 MODEL:

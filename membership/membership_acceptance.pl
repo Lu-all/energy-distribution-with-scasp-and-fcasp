@@ -1,5 +1,5 @@
 accept_membership :-
-    met_minimum_resource_apportation,
+    met_minimum_resource_contribution,
     met_requirement,
     low_consumption.
 
