@@ -1,0 +1,55 @@
+% QUERY:?- accept_membership.
+
+	ANSWER:	1 (in 0.116 ms)
+
+JUSTIFICATION_TREE:
+accept_membership :-
+    met_minimum_resource_apportation,
+    met_requirement :-
+        low_carbon_emissions :-
+            low_carbon_certification.
+    low_consumption :-
+        energy_efficiency_certificate :-
+            external_certificate.
+global_constraint.
+
+MODEL:
+{ accept_membership,  met_minimum_resource_apportation,  met_requirement,  low_consumption }
+BINDINGS:
+
+
+	ANSWER:	2 (in 0.178 ms)
+
+JUSTIFICATION_TREE:
+accept_membership :-
+    met_minimum_resource_apportation,
+    met_requirement :-
+        special_condition :-
+            gender_based_violence_victim.
+    low_consumption :-
+        energy_efficiency_certificate :-
+            external_certificate.
+global_constraint.
+
+MODEL:
+{ accept_membership,  met_minimum_resource_apportation,  met_requirement,  low_consumption }
+BINDINGS:
+
+
+	ANSWER:	3 (in 0.125 ms)
+
+JUSTIFICATION_TREE:
+accept_membership :-
+    met_minimum_resource_apportation,
+    met_requirement :-
+        special_condition :-
+            disability_condition.
+    low_consumption :-
+        energy_efficiency_certificate :-
+            external_certificate.
+global_constraint.
+
+MODEL:
+{ accept_membership,  met_minimum_resource_apportation,  met_requirement,  low_consumption }
+BINDINGS:
+

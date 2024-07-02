@@ -1,0 +1,13 @@
+% QUERY:?- not accept_membership.
+
+	ANSWER:	1 (in 0.043 ms)
+
+JUSTIFICATION_TREE:
+not accept_membership :-
+    not met_minimum_resource_apportation.
+global_constraint.
+
+MODEL:
+{  }
+BINDINGS:
+

@@ -1,0 +1,64 @@
+% QUERY:?- accept_membership.
+
+	ANSWER:	1 (in 0.165 ms)
+
+JUSTIFICATION_TREE:
+accept_membership :-
+    met_minimum_resource_apportation,
+    met_requirement :-
+        low_carbon_emissions :-
+            cooperative_test_passed :-
+                green_energy_generation,
+                not last_exam_failed :-
+                    energy_efficiency_certificate :-
+                        chs(cooperative_test_passed).
+    low_consumption :-
+        proved(energy_efficiency_certificate).
+global_constraint.
+
+MODEL:
+{ accept_membership,  met_minimum_resource_apportation,  met_requirement,  low_consumption }
+BINDINGS:
+
+
+	ANSWER:	2 (in 0.025 ms)
+
+JUSTIFICATION_TREE:
+accept_membership :-
+    met_minimum_resource_apportation,
+    met_requirement :-
+        low_carbon_emissions :-
+            cooperative_test_passed :-
+                green_energy_generation,
+                not last_exam_failed :-
+                    energy_efficiency_certificate :-
+                        chs(cooperative_test_passed).
+    low_consumption :-
+        proved(green_energy_generation).
+global_constraint.
+
+MODEL:
+{ accept_membership,  met_minimum_resource_apportation,  met_requirement,  low_consumption }
+BINDINGS:
+
+
+	ANSWER:	3 (in 0.024 ms)
+
+JUSTIFICATION_TREE:
+accept_membership :-
+    met_minimum_resource_apportation,
+    met_requirement :-
+        low_carbon_emissions :-
+            cooperative_test_passed :-
+                green_energy_generation,
+                not last_exam_failed :-
+                    energy_efficiency_certificate :-
+                        chs(cooperative_test_passed).
+    low_consumption :-
+        proved(cooperative_test_passed).
+global_constraint.
+
+MODEL:
+{ accept_membership,  met_minimum_resource_apportation,  met_requirement,  low_consumption }
+BINDINGS:
+

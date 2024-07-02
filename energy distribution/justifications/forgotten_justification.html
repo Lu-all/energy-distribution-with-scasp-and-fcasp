@@ -1,0 +1,407 @@
+<!doctype html>
+ <html>
+ <head>
+ <meta charset="utf-8">
+ <title>c(ASP) Justification</title>
+ <style>
+.treemenu li { list-style: none; }
+.treemenu .toggler { cursor: pointer; }
+.treemenu .toggler:before { display: inline-block; margin-right: 2pt; }
+li.tree-empty > .toggler { opacity: 0.3; cursor: default; }
+li.tree-empty > .toggler:before { content: " "; }
+li.tree-closed > .toggler:before {
+    content: "";
+    height: 0;
+    width: 0;
+    border-color: transparent blue;
+    border-style: solid;
+    border-width: 0.25em 0 0.25em 0.5em;
+}
+li.tree-opened > .toggler:before {
+    content: "";
+    height: 0;
+    width: 0;
+    border-color: blue transparent ;
+    border-style: solid;
+    border-width: 0.5em 0.25em 0 0.25em;
+}
+</style>
+ 
+ <link rel="icon" href="logo.ico">
+ 
+ </head>
+ 
+ <body style="font-size:15px;background: #ECECEC; margin:80px; color:#333;">
+ 
+<h3>Query:</h3>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;?-&nbsp;&nbsp;percentages(Percentages).<br>
+<br>
+<h3>Answer:</h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Percentages = [adam(2859250/68803),lucy(297750/9829),alex(1936800/68803)]<br>
+<br>
+
+<h3>Model:</h3>
+{ percentages([adam(2859250/68803),lucy(297750/9829),alex(1936800/68803)]),  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fair_income_adam(11437/7560),  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;salary(eric,1400),  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;salary(mary,1350),  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;productivity(eric,2110),  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;productivity(mary,2050),  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fair_income_lucy(397/360),  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;salary(julie,1100),  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;salary(jean,1200),  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;salary(jane,1300),  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;productivity(julie,1210),  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;productivity(jean,1450),  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;productivity(jane,1300),  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fair_income_alex(538/525),  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;salary(boris,1050),  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;salary(bea,1000),  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;neg_1,  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;not neg_2,  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;productivity(boris,1060),  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;productivity(bea,1040),  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ponder(11437/7560,9829/2700,2859250/68803),  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ponder(397/360,9829/2700,297750/9829),  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ponder(538/525,9829/2700,1936800/68803) }<br><br>
+<h3> Justification: <button onclick="expand()">Expand All</button><button onclick="depth(+1)">+1</button><button onclick="depth(-1)">-1</button><button onclick="collapse()">Collapse All</button></h3>
+
+
+ <ul class="tree">
+
+
+     <li> 
+     percentages([adam(2859250/68803),lucy(297750/9829),alex(1936800/68803)]) :-
+         <ul>
+         <li> 
+         fair_income_adam(11437/7560) :-
+             <ul>
+             <li> 
+             salary(eric,1400) :-
+                 <ul>
+                 <li> 
+                 1400 is 1200+(100+100).
+                 </li> 
+                 </ul> 
+             </li> 
+             <li> 
+             salary(mary,1350) :-
+                 <ul>
+                 <li> 
+                 1350 is 1200+(150+0).
+                 </li> 
+                 </ul> 
+             </li> 
+             <li> 
+             productivity(eric,2110) :-
+                 <ul>
+                 <li> 
+                 2110 is 110+2000.
+                 </li> 
+                 </ul> 
+             </li> 
+             <li> 
+             productivity(mary,2050) :-
+                 <ul>
+                 <li> 
+                 2050 is 100+1950.
+                 </li> 
+                 </ul> 
+             </li> 
+             </ul> 
+         </li> 
+         <li> 
+         fair_income_lucy(397/360) :-
+             <ul>
+             <li> 
+             salary(julie,1100) :-
+                 <ul>
+                 <li> 
+                 1100 is 1000+100.
+                 </li> 
+                 </ul> 
+             </li> 
+             <li> 
+             salary(jean,1200) :-
+                 <ul>
+                 <li> 
+                 1200 is 1000+200.
+                 </li> 
+                 </ul> 
+             </li> 
+             <li> 
+             salary(jane,1300) :-
+                 <ul>
+                 <li> 
+                 1300 is 1000+300.
+                 </li> 
+                 </ul> 
+             </li> 
+             <li> 
+             productivity(julie,1210) :-
+                 <ul>
+                 <li> 
+                 1210 is 100+(10+1100).
+                 </li> 
+                 </ul> 
+             </li> 
+             <li> 
+             productivity(jean,1450) :-
+                 <ul>
+                 <li> 
+                 1450 is 200+(50+1200).
+                 </li> 
+                 </ul> 
+             </li> 
+             <li> 
+             productivity(jane,1300) :-
+                 <ul>
+                 <li> 
+                 1300 is 300+(0+1000).
+                 </li> 
+                 </ul> 
+             </li> 
+             </ul> 
+         </li> 
+         <li> 
+         fair_income_alex(538/525) :-
+             <ul>
+             <li> 
+             salary(boris,1050) :-
+                 <ul>
+                 <li> 
+                 1050 is 900+(100+50).
+                 </li> 
+                 </ul> 
+             </li> 
+             <li> 
+             salary(bea,1000) :-
+                 <ul>
+                 <li> 
+                 neg_1 :-
+                     <ul>
+                     <li> 
+                     not neg_2 :-
+                         <ul>
+                         <li> 
+                         chs(neg_1).
+                         </li> 
+                         </ul> 
+                     </li> 
+                     </ul> 
+                 </li> 
+                 <li> 
+                 1000 is 900+(100+0).
+                 </li> 
+                 </ul> 
+             </li> 
+             <li> 
+             productivity(boris,1060) :-
+                 <ul>
+                 <li> 
+                 1060 is 1000+60.
+                 </li> 
+                 </ul> 
+             </li> 
+             <li> 
+             productivity(bea,1040) :-
+                 <ul>
+                 <li> 
+                 1040 is 1000+40.
+                 </li> 
+                 </ul> 
+             </li> 
+             </ul> 
+         </li> 
+         <li> 
+         ponder(11437/7560,9829/2700,2859250/68803),
+         </li> 
+         <li> 
+         ponder(397/360,9829/2700,297750/9829),
+         </li> 
+         <li> 
+         ponder(538/525,9829/2700,1936800/68803).
+         </li> 
+         </ul> 
+     </li> 
+     <li> 
+     global_constraint.
+     </li> 
+ </ul> 
+
+<script
+  src="https://code.jquery.com/jquery-1.11.2.min.js"
+  integrity="sha256-Ls0pXSlb7AYs7evhd+VLnWsZ/AqEHcXBeMZUycz/CcA="
+  crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+    (function($){
+        $.fn.depth = function(options,depth) {
+            options = options || {};
+            options.delay = options.delay || 0;
+            
+            this.find("> li").each(function() {
+                e = $(this)
+                var subtree = e.find('> ul');
+
+                if (subtree.length > 0) {
+                    if (depth > 0) {
+                        e.addClass('tree-opened');
+                        e.removeClass('tree-closed');
+
+                        //subtree.slideDown(options.delay);
+                        subtree.show(options.delay);
+
+                        subtree.depth(options,depth-1);
+                    } else {
+                        e.removeClass('tree-opened');
+                        e.addClass('tree-closed');
+
+                        //subtree.slideUp(options.delay);
+                        subtree.hide(options.delay);
+
+                        subtree.collapse(options);
+                    }
+                }
+            });
+            return true;
+        }
+        
+        $.fn.expand = function(options,depth) {
+            options = options || {};
+            options.delay = options.delay || 0;
+            
+            this.find("> li").each(function() {
+                e = $(this)
+                var subtree = e.find('> ul');
+
+                if (subtree.length > 0) {
+                    e.addClass('tree-opened');
+                    e.removeClass('tree-closed');
+
+                    //subtree.slideDown(options.delay);
+                    subtree.show(options.delay);
+
+                    subtree.expand(options,depth+1);
+                }
+                //g_depth=Math.max(g_depth,depth);
+            });
+            return true;
+        }
+
+        $.fn.collapse = function(options) {
+            options = options || {};
+            options.delay = options.delay || 0;
+            
+            this.find("> li").each(function() {
+                e = $(this)
+                var subtree = e.find('> ul');
+
+                if (subtree.length > 0) {
+                    e.removeClass('tree-opened');
+                    e.addClass('tree-closed');
+
+                    subtree.slideUp(options.delay);
+                    subtree.hide(options.delay);
+
+                    subtree.collapse(options);
+                } 
+            });
+            return true;
+        }
+        
+        $.fn.treemenu = function(options) {
+            options = options || {};
+            options.delay = options.delay || 0;
+            options.openActive = options.openActive || false;
+            options.closeOther = options.closeOther || false;
+            options.activeSelector = options.activeSelector || ".active";
+
+            this.addClass("treemenu");
+
+            if (!options.nonroot) {
+                this.addClass("treemenu-root");
+            }
+
+            options.nonroot = true;
+
+            this.find("> li").each(function() {
+                e = $(this);
+                var subtree = e.find('> ul');
+                var button = e.find('.toggler').eq(0);
+
+                if(button.length == 0) {
+                    // create toggler
+                    var button = $('<span>');
+                    button.addClass('toggler');
+                    e.prepend(button);
+                }
+
+                if(subtree.length > 0) {
+                    subtree.hide();
+
+                    e.addClass('tree-closed');
+
+                    e.find(button).click(function() {
+                        var li = $(this).parent('li');
+
+                        if (options.closeOther && li.hasClass('tree-closed')) {
+                            var siblings = li.parent('ul').find("li:not(.tree-empty)");
+                            siblings.removeClass("tree-opened");
+                            siblings.addClass("tree-closed");
+                            siblings.removeClass(options.activeSelector);
+                            siblings.find('> ul').slideUp(options.delay);
+                        }
+
+                        li.find('> ul').slideToggle(options.delay);
+                        li.toggleClass('tree-opened');
+                        li.toggleClass('tree-closed');
+                        li.toggleClass(options.activeSelector);
+                    });
+
+                    $(this).find('> ul').treemenu(options);
+                } else {
+                    $(this).addClass('tree-empty');
+                }
+            });
+
+            if (options.openActive) {
+                var cls = this.attr("class");
+
+                this.find(options.activeSelector).each(function(){
+                    var el = $(this).parent();
+
+                    while (el.attr("class") !== cls) {
+                        el.find('> ul').show();
+                        if(el.prop("tagName") === 'UL') {
+                            el.show();
+                        } else if (el.prop("tagName") === 'LI') {
+                            el.removeClass('tree-closed');
+                            el.addClass("tree-opened");
+                            el.show();
+                        }
+
+                        el = el.parent();
+                    }
+                });
+            }
+
+            //this.expand({delay:0},0);
+            //max_depth = g_depth;
+            //this.collapse({delay:0});
+            //g_depth = 0;
+
+            return this;
+        }
+    })(jQuery);
+
+var g_depth = 0;
+var max_depth = 400
+
+function depth(step){
+    g_depth = g_depth + step;
+    g_depth = g_depth < 0 ? 0 : g_depth;
+    g_depth = g_depth > max_depth ? max_depth : g_depth;
+    $(".tree").depth({delay:0},g_depth);
+}
+
+function expand(){
+    g_depth = 0     
+    $(".tree").expand({delay:0},0);
+}
+
+function collapse(){
+    $(".tree").collapse({delay:0});
+    g_depth = 0;    
+}
+
+$(function(){
+    $(".tree").treemenu({delay:0}).openActive();
+});
+
+</script>
+
+
+
+ <div style='min-height: 400px'></div>
+
+</body>
+</html>
+

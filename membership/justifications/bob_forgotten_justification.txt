@@ -1,0 +1,4 @@
+% QUERY:?- accept_membership.
+
+no models
+

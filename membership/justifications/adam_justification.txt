@@ -1,0 +1,38 @@
+% QUERY:?- accept_membership.
+
+	ANSWER:	1 (in 0.147 ms)
+
+JUSTIFICATION_TREE:
+accept_membership :-
+    met_minimum_resource_apportation,
+    met_requirement :-
+        low_carbon_emissions :-
+            cooperative_test_passed :-
+                onsite_exam_passed.
+    low_consumption :-
+        energy_efficiency_certificate :-
+            proved(cooperative_test_passed).
+global_constraint.
+
+MODEL:
+{ accept_membership,  met_minimum_resource_apportation,  met_requirement,  low_consumption }
+BINDINGS:
+
+
+	ANSWER:	2 (in 0.032 ms)
+
+JUSTIFICATION_TREE:
+accept_membership :-
+    met_minimum_resource_apportation,
+    met_requirement :-
+        low_carbon_emissions :-
+            cooperative_test_passed :-
+                onsite_exam_passed.
+    low_consumption :-
+        proved(cooperative_test_passed).
+global_constraint.
+
+MODEL:
+{ accept_membership,  met_minimum_resource_apportation,  met_requirement,  low_consumption }
+BINDINGS:
+

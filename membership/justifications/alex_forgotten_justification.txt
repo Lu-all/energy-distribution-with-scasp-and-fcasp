@@ -1,0 +1,30 @@
+% QUERY:?- accept_membership.
+
+	ANSWER:	1 (in 0.06 ms)
+
+JUSTIFICATION_TREE:
+accept_membership :-
+    met_minimum_resource_apportation,
+    met_requirement :-
+        low_carbon_emissions.
+    low_consumption.
+global_constraint.
+
+MODEL:
+{ accept_membership,  met_minimum_resource_apportation,  met_requirement,  low_consumption }
+BINDINGS:
+
+
+	ANSWER:	2 (in 0.036 ms)
+
+JUSTIFICATION_TREE:
+accept_membership :-
+    met_minimum_resource_apportation,
+    met_requirement,
+    low_consumption.
+global_constraint.
+
+MODEL:
+{ accept_membership,  met_minimum_resource_apportation,  met_requirement,  low_consumption }
+BINDINGS:
+
