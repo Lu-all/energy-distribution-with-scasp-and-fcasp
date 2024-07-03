@@ -1,16 +1,13 @@
 % QUERY:?- accept_membership.
 
-	ANSWER:	1 (in 0.121 ms)
+	ANSWER:	1 (in 0.123 ms)
 
 JUSTIFICATION_TREE:
 accept_membership :-
     met_minimum_resource_contribution,
     met_requirement :-
-        low_carbon_emissions :-
-            low_carbon_certification.
-    low_consumption :-
-        energy_efficiency_certificate :-
-            external_certificate.
+        low_carbon_emissions.
+    low_consumption.
 global_constraint.
 
 MODEL:
@@ -18,17 +15,13 @@ MODEL:
 BINDINGS:
 
 
-	ANSWER:	2 (in 0.198 ms)
+	ANSWER:	2 (in 0.209 ms)
 
 JUSTIFICATION_TREE:
 accept_membership :-
     met_minimum_resource_contribution,
-    met_requirement :-
-        special_condition :-
-            gender_based_violence_victim.
-    low_consumption :-
-        energy_efficiency_certificate :-
-            external_certificate.
+    met_requirement,
+    low_consumption.
 global_constraint.
 
 MODEL:
@@ -36,17 +29,13 @@ MODEL:
 BINDINGS:
 
 
-	ANSWER:	3 (in 0.299 ms)
+	ANSWER:	3 (in 0.223 ms)
 
 JUSTIFICATION_TREE:
 accept_membership :-
     met_minimum_resource_contribution,
-    met_requirement :-
-        special_condition :-
-            disability_condition.
-    low_consumption :-
-        energy_efficiency_certificate :-
-            external_certificate.
+    met_requirement,
+    low_consumption.
 global_constraint.
 
 MODEL:

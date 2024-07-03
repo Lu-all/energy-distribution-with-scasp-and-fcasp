@@ -1,0 +1,72 @@
+% QUERY:?- not accept_membership.
+
+	ANSWER:	1 (in 0.067 ms)
+
+JUSTIFICATION_TREE:
+not accept_membership :-
+    not met_minimum_resource_contribution.
+global_constraint.
+
+MODEL:
+{  }
+BINDINGS:
+
+
+	ANSWER:	2 (in 0.495 ms)
+
+JUSTIFICATION_TREE:
+not accept_membership :-
+    not met_requirement :-
+        not low_carbon_emissions :-
+            not cooperative_test_passed.
+global_constraint.
+
+MODEL:
+{  }
+BINDINGS:
+
+
+	ANSWER:	3 (in 0.499 ms)
+
+JUSTIFICATION_TREE:
+not accept_membership :-
+    not met_requirement :-
+        not low_carbon_emissions :-
+            not cooperative_test_passed :-
+                last_exam_failed :-
+                    chs(not cooperative_test_passed).
+global_constraint.
+
+MODEL:
+{ last_exam_failed }
+BINDINGS:
+
+
+	ANSWER:	4 (in 0.288 ms)
+
+JUSTIFICATION_TREE:
+not accept_membership :-
+    not low_consumption :-
+        not cooperative_test_passed,
+        proved(not cooperative_test_passed).
+global_constraint.
+
+MODEL:
+{  }
+BINDINGS:
+
+
+	ANSWER:	5 (in 0.182 ms)
+
+JUSTIFICATION_TREE:
+not accept_membership :-
+    not low_consumption :-
+        not cooperative_test_passed :-
+            last_exam_failed.
+        proved(not cooperative_test_passed).
+global_constraint.
+
+MODEL:
+{ last_exam_failed }
+BINDINGS:
+

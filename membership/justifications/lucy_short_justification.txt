@@ -1,6 +1,6 @@
 % QUERY:?- accept_membership.
 
-	ANSWER:	1 (in 0.38 ms)
+	ANSWER:	1 (in 0.287 ms)
 
 JUSTIFICATION_TREE:
 accept_membership :-
@@ -8,12 +8,9 @@ accept_membership :-
     met_requirement :-
         low_carbon_emissions :-
             cooperative_test_passed :-
-                green_energy_generation,
                 not last_exam_failed :-
-                    energy_efficiency_certificate :-
-                        chs(cooperative_test_passed).
-    low_consumption :-
-        proved(energy_efficiency_certificate).
+                    chs(cooperative_test_passed).
+    low_consumption.
 global_constraint.
 
 MODEL:
@@ -21,7 +18,7 @@ MODEL:
 BINDINGS:
 
 
-	ANSWER:	2 (in 0.057 ms)
+	ANSWER:	2 (in 0.047 ms)
 
 JUSTIFICATION_TREE:
 accept_membership :-
@@ -29,12 +26,9 @@ accept_membership :-
     met_requirement :-
         low_carbon_emissions :-
             cooperative_test_passed :-
-                green_energy_generation,
                 not last_exam_failed :-
-                    energy_efficiency_certificate :-
-                        chs(cooperative_test_passed).
-    low_consumption :-
-        proved(green_energy_generation).
+                    chs(cooperative_test_passed).
+    low_consumption.
 global_constraint.
 
 MODEL:
@@ -42,7 +36,7 @@ MODEL:
 BINDINGS:
 
 
-	ANSWER:	3 (in 0.051 ms)
+	ANSWER:	3 (in 0.057 ms)
 
 JUSTIFICATION_TREE:
 accept_membership :-
@@ -50,10 +44,8 @@ accept_membership :-
     met_requirement :-
         low_carbon_emissions :-
             cooperative_test_passed :-
-                green_energy_generation,
                 not last_exam_failed :-
-                    energy_efficiency_certificate :-
-                        chs(cooperative_test_passed).
+                    chs(cooperative_test_passed).
     low_consumption :-
         proved(cooperative_test_passed).
 global_constraint.

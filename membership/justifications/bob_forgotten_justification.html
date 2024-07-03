@@ -34,9 +34,35 @@ li.tree-opened > .toggler:before {
  <body style="font-size:15px;background: #ECECEC; margin:80px; color:#333;">
  
 <h3>Query:</h3>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;?-&nbsp;&nbsp;accept_membership.<br><br>
-<h3>Answer:</h3>no models<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;?-&nbsp;&nbsp;not accept_membership.<br>
+<br>
+<h3>Answer:</h3>yes<br>
+
+<h3>Model:</h3>
+{  }<br><br>
 <h3> Justification: <button onclick="expand()">Expand All</button><button onclick="depth(+1)">+1</button><button onclick="depth(-1)">-1</button><button onclick="collapse()">Collapse All</button></h3>
+
+
+ <ul class="tree">
+
+
+     <li> 
+     not accept_membership :-
+         <ul>
+         <li> 
+         not low_consumption :-
+             <ul>
+             <li> 
+             not cooperative_test_passed.
+             </li> 
+             </ul> 
+         </li> 
+         </ul> 
+     </li> 
+     <li> 
+     global_constraint.
+     </li> 
+ </ul> 
 
 <script
   src="https://code.jquery.com/jquery-1.11.2.min.js"

@@ -1,4 +1,99 @@
-% QUERY:?- accept_membership.
+% QUERY:?- not accept_membership.
 
-no models
+	ANSWER:	1 (in 0.064 ms)
+
+JUSTIFICATION_TREE:
+not accept_membership :-
+    not met_minimum_resource_contribution.
+global_constraint.
+
+MODEL:
+{  }
+BINDINGS:
+
+
+	ANSWER:	2 (in 0.728 ms)
+
+JUSTIFICATION_TREE:
+not accept_membership :-
+    not met_requirement :-
+        not low_carbon_emissions :-
+            not low_carbon_certification,
+            not cooperative_test_passed :-
+                not onsite_exam_passed,
+                not green_energy_generation.
+        not met_minimal_work_quality,
+        not wildlife_protection,
+        not special_condition :-
+            not gender_based_violence_victim,
+            not disability_condition.
+global_constraint.
+
+MODEL:
+{  }
+BINDINGS:
+
+
+	ANSWER:	3 (in 0.503 ms)
+
+JUSTIFICATION_TREE:
+not accept_membership :-
+    not met_requirement :-
+        not low_carbon_emissions :-
+            not low_carbon_certification,
+            not cooperative_test_passed :-
+                not onsite_exam_passed,
+                last_exam_failed :-
+                    not energy_efficiency_certificate :-
+                        not external_certificate,
+                        chs(not cooperative_test_passed).
+        not met_minimal_work_quality,
+        not wildlife_protection,
+        not special_condition :-
+            not gender_based_violence_victim,
+            not disability_condition.
+global_constraint.
+
+MODEL:
+{ last_exam_failed }
+BINDINGS:
+
+
+	ANSWER:	4 (in 0.277 ms)
+
+JUSTIFICATION_TREE:
+not accept_membership :-
+    not low_consumption :-
+        not energy_efficiency_certificate :-
+            not external_certificate,
+            not cooperative_test_passed :-
+                not onsite_exam_passed,
+                not green_energy_generation.
+        proved(not green_energy_generation),
+        proved(not cooperative_test_passed).
+global_constraint.
+
+MODEL:
+{  }
+BINDINGS:
+
+
+	ANSWER:	5 (in 0.164 ms)
+
+JUSTIFICATION_TREE:
+not accept_membership :-
+    not low_consumption :-
+        not energy_efficiency_certificate :-
+            not external_certificate,
+            not cooperative_test_passed :-
+                not onsite_exam_passed,
+                last_exam_failed :-
+                    chs(not energy_efficiency_certificate).
+        not green_energy_generation,
+        proved(not cooperative_test_passed).
+global_constraint.
+
+MODEL:
+{ last_exam_failed }
+BINDINGS:
 

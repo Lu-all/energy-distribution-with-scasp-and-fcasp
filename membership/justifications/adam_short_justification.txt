@@ -1,17 +1,15 @@
 % QUERY:?- accept_membership.
 
-	ANSWER:	1 (in 0.136 ms)
+	ANSWER:	1 (in 0.173 ms)
 
 JUSTIFICATION_TREE:
 accept_membership :-
     met_minimum_resource_contribution,
     met_requirement :-
         low_carbon_emissions :-
-            cooperative_test_passed :-
-                onsite_exam_passed.
+            cooperative_test_passed.
     low_consumption :-
-        energy_efficiency_certificate :-
-            proved(cooperative_test_passed).
+        proved(cooperative_test_passed).
 global_constraint.
 
 MODEL:
@@ -19,15 +17,14 @@ MODEL:
 BINDINGS:
 
 
-	ANSWER:	2 (in 0.047 ms)
+	ANSWER:	2 (in 0.054 ms)
 
 JUSTIFICATION_TREE:
 accept_membership :-
     met_minimum_resource_contribution,
     met_requirement :-
         low_carbon_emissions :-
-            cooperative_test_passed :-
-                onsite_exam_passed.
+            cooperative_test_passed.
     low_consumption :-
         proved(cooperative_test_passed).
 global_constraint.

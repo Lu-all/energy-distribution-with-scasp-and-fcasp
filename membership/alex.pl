@@ -7,7 +7,6 @@ low_carbon_certification.
 gender_based_violence_victim.
 disability_condition.
 % cooperative_test_passed.
-% met_minimal_production.
 % green_energy_generation.
 external_certificate.
 % onsite_exam_passed.

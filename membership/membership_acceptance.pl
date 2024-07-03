@@ -7,29 +7,29 @@ met_requirement :-
     low_carbon_emissions.
 
 low_carbon_emissions :-
-    low_carbon_certification.
+    low_carbon_certification. %
 low_carbon_emissions :-
     cooperative_test_passed.
 
 met_requirement :-
-    met_minimal_work_quality.
+    met_minimal_work_quality. %
 
 met_requirement :-
-    wildlife_protection.
+    wildlife_protection. %
 
 met_requirement :-
-    special_condition.
+    special_condition. %
 
 special_condition :-
-    gender_based_violence_victim.
+    gender_based_violence_victim. %
 
 special_condition :-
-    disability_condition.
+    disability_condition. %
 
 low_consumption:-
-    energy_efficiency_certificate.
+    energy_efficiency_certificate. %
 low_consumption:-
-    green_energy_generation.
+    green_energy_generation. %
 low_consumption:-
     cooperative_test_passed.
 

@@ -1,6 +1,6 @@
 % QUERY:?- accept_membership.
 
-	ANSWER:	1 (in 0.06 ms)
+	ANSWER:	1 (in 0.07 ms)
 
 JUSTIFICATION_TREE:
 accept_membership :-
@@ -11,11 +11,11 @@ accept_membership :-
 global_constraint.
 
 MODEL:
-{ accept_membership,  met_minimum_resource_contribution,  met_requirement,  low_consumption }
+{ accept_membership,  met_minimum_resource_contribution,  met_requirement,  low_carbon_emissions,  low_consumption }
 BINDINGS:
 
 
-	ANSWER:	2 (in 0.036 ms)
+	ANSWER:	2 (in 0.051 ms)
 
 JUSTIFICATION_TREE:
 accept_membership :-
